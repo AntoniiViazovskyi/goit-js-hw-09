@@ -22,7 +22,7 @@ form.addEventListener('submit', handleSubmit)
 
 function handleInput(event) {
   const { name, value } = event.target
-  formData[name] = value
+  formData[name] = value.trim()
   localStorage.setItem('feedback-form-state', JSON.stringify(formData))
 }
 
