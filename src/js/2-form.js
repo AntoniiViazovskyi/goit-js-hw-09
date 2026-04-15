@@ -21,6 +21,7 @@ form.addEventListener('input', handleInput)
 form.addEventListener('submit', handleSubmit)
 
 function handleInput(event) {
+  console.log(formData)
   const { name, value } = event.target
   formData[name] = value
   localStorage.setItem('feedback-form-state', JSON.stringify(formData))
