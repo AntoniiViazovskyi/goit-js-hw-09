@@ -21,7 +21,6 @@ form.addEventListener('input', handleInput)
 form.addEventListener('submit', handleSubmit)
 
 function handleInput(event) {
-  console.log(formData)
   const { name, value } = event.target
   formData[name] = value
   localStorage.setItem('feedback-form-state', JSON.stringify(formData))
@@ -33,6 +32,7 @@ function handleSubmit(event) {
     alert('Fill please all fields')
     return
   }
+  console.log(formData)
   formData = { email: '', message: '' }
   localStorage.removeItem('feedback-form-state')
   form.reset()
